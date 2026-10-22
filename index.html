@@ -80,6 +80,7 @@
         "Demon Hex Corporation",
         "Madara XMD WhatsApp Bot",
         "Madara AI Assistant",
+        "Madara X IDM",
         "Web Development"
       ]
     },
@@ -158,6 +159,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--b);
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
 
 /* =========================================================
    1. DESKTOP / PC LAYOUT
@@ -325,6 +327,9 @@ section{padding:100px 6vw;max-width:1280px;margin:0 auto;position:relative;z-ind
   border-radius:22px;
   padding:28px;
   transition:border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .cap-card:hover, .cs-card:hover, .tk-card:hover, .faq-item:hover {
   border-color: var(--red);
@@ -641,7 +646,7 @@ footer{text-align:center;color:var(--mute);padding:30px 20px 50px;font-size:14px
   </div>
 </section>
 
-<!-- Expertise Section -->
+<!-- Expertise Section (Demon Hex Capabilities - 5 Cards including Madara X IDM) -->
 <section id="expertise">
   <div class="sec-center reveal">
     <div class="sec-badge">Demon Hex Capabilities</div>
@@ -649,49 +654,95 @@ footer{text-align:center;color:var(--mute);padding:30px 20px 50px;font-size:14px
     <p class="sub">Creating high-speed web apps, AI assistants, and automated systems under Demon Hex Corporation.</p>
   </div>
 
-  <div class="grid-4">
+  <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+    <!-- Card 1: Demon Hex Corp -->
     <div class="cap-card reveal delay-1">
-      <div class="cap-icon">🔥</div>
-      <h3>Demon Hex Corp</h3>
-      <p>Leading creative web portals, dark-aesthetic UI systems, and next-gen digital tools.</p>
-      <ul class="cap-list">
-        <li>Founder: Menula Oshada</li>
-        <li>Full-Stack Web Apps</li>
-        <li>Modern Dark UI</li>
-      </ul>
+      <div>
+        <div class="cap-icon">🔥</div>
+        <h3>Demon Hex Corp</h3>
+        <p>Leading creative web portals, dark-aesthetic UI systems, and next-gen digital tools.</p>
+        <ul class="cap-list">
+          <li>Founder: Menula Oshada</li>
+          <li>Full-Stack Web Apps</li>
+          <li>Modern Dark UI</li>
+        </ul>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:16px;">
+        <a href="#" target="_blank" rel="noopener" class="btn p" style="flex:1;padding:8px 10px;font-size:12px;text-align:center;">Visit Site ↗</a>
+        <a href="#" target="_blank" rel="noopener" class="btn" style="flex:1;padding:8px 10px;font-size:12px;text-align:center;border-color:var(--red);color:var(--red);">Download ⬇</a>
+      </div>
     </div>
 
+    <!-- Card 2: Madara AI Assistant -->
     <div class="cap-card reveal delay-2">
-      <div class="cap-icon">🤖</div>
-      <h3>Madara AI Assistant</h3>
-      <p>Custom intelligent assistant framework built for automated task execution and smart interactions.</p>
-      <ul class="cap-list">
-        <li>LLM API Pipelines</li>
-        <li>Python Workflows</li>
-        <li>Real-time Processing</li>
-      </ul>
+      <div>
+        <div class="cap-icon">🤖</div>
+        <h3>Madara AI Assistant</h3>
+        <p>Custom intelligent assistant framework built for automated task execution and smart interactions.</p>
+        <ul class="cap-list">
+          <li>LLM API Pipelines</li>
+          <li>Python Workflows</li>
+          <li>Real-time Processing</li>
+        </ul>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:16px;">
+        <a href="#" target="_blank" rel="noopener" class="btn p" style="flex:1;padding:8px 10px;font-size:12px;text-align:center;">Visit Site ↗</a>
+        <a href="#" target="_blank" rel="noopener" class="btn" style="flex:1;padding:8px 10px;font-size:12px;text-align:center;border-color:var(--red);color:var(--red);">Download ⬇</a>
+      </div>
     </div>
 
+    <!-- Card 3: Madara XMD Bot -->
     <div class="cap-card reveal delay-3">
-      <div class="cap-icon">💬</div>
-      <h3>Madara XMD Bot</h3>
-      <p>Multi-device WhatsApp messaging automation bot for group management and utilities.</p>
-      <ul class="cap-list">
-        <li>Node.js Automation</li>
-        <li>Zero-Downtime Reliability</li>
-        <li>Custom Commands</li>
-      </ul>
+      <div>
+        <div class="cap-icon">💬</div>
+        <h3>Madara XMD Bot</h3>
+        <p>Multi-device WhatsApp messaging automation bot for group management and utilities.</p>
+        <ul class="cap-list">
+          <li>Node.js Automation</li>
+          <li>Zero-Downtime Reliability</li>
+          <li>Custom Commands</li>
+        </ul>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:16px;">
+        <a href="#" target="_blank" rel="noopener" class="btn p" style="flex:1;padding:8px 10px;font-size:12px;text-align:center;">Visit Site ↗</a>
+        <a href="#" target="_blank" rel="noopener" class="btn" style="flex:1;padding:8px 10px;font-size:12px;text-align:center;border-color:var(--red);color:var(--red);">Download ⬇</a>
+      </div>
     </div>
 
+    <!-- Card 4: Adaptive Web UI -->
     <div class="cap-card reveal delay-4">
-      <div class="cap-icon">🌐</div>
-      <h3>Adaptive Web UI</h3>
-      <p>Websites engineered to look like a native mobile app on phones and a wide dashboard on PCs.</p>
-      <ul class="cap-list">
-        <li>PC & Mobile Adaptive</li>
-        <li>Clean Code Standards</li>
-        <li>Optimized Speed</li>
-      </ul>
+      <div>
+        <div class="cap-icon">🌐</div>
+        <h3>Adaptive Web UI</h3>
+        <p>Websites engineered to look like a native mobile app on phones and a wide dashboard on PCs.</p>
+        <ul class="cap-list">
+          <li>PC & Mobile Adaptive</li>
+          <li>Clean Code Standards</li>
+          <li>Optimized Speed</li>
+        </ul>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:16px;">
+        <a href="#" target="_blank" rel="noopener" class="btn p" style="flex:1;padding:8px 10px;font-size:12px;text-align:center;">Visit Site ↗</a>
+        <a href="#" target="_blank" rel="noopener" class="btn" style="flex:1;padding:8px 10px;font-size:12px;text-align:center;border-color:var(--red);color:var(--red);">Download ⬇</a>
+      </div>
+    </div>
+
+    <!-- Card 5: Madara X IDM (Newly Added Here) -->
+    <div class="cap-card reveal delay-5" style="border-color:var(--red);">
+      <div>
+        <div class="cap-icon" style="background:rgba(255,43,58,0.2);">⚡</div>
+        <h3>Madara X IDM</h3>
+        <p>Ultimate download manager with 16-threads turbo speed engine, live animated wallpaper, and desktop app support.</p>
+        <ul class="cap-list">
+          <li>16-Threads Engine</li>
+          <li>Live Matrix BG</li>
+          <li>Desktop & Web App</li>
+        </ul>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:16px;">
+        <a href="#" target="_blank" rel="noopener" class="btn p" style="flex:1;padding:8px 10px;font-size:12px;text-align:center;">Visit Site ↗</a>
+        <a href="#" target="_blank" rel="noopener" class="btn" style="flex:1;padding:8px 10px;font-size:12px;text-align:center;border-color:var(--red);color:var(--red);">Download ⬇</a>
+      </div>
     </div>
   </div>
 </section>
