@@ -513,6 +513,90 @@ footer{text-align:center;color:var(--mute);padding:30px 20px 50px;font-size:14px
   transform: scale(1.2);
 }
 
+/* CUSTOM POPUP STYLES FOR LINK & SCREENSHOT */
+.madara-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeInPopup 0.3s ease forwards;
+}
+.madara-popup-box {
+  background: var(--panel);
+  border: 2px solid var(--red);
+  border-radius: 24px;
+  padding: 30px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 0 50px rgba(255, 43, 58, 0.4);
+  text-align: center;
+  font-family: var(--b);
+}
+.madara-popup-box h3 {
+  font-family: var(--d);
+  font-size: 24px;
+  color: var(--red);
+  margin-top: 0;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.madara-popup-img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  margin-bottom: 16px;
+  background: #000;
+}
+.madara-popup-box p {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.madara-popup-link {
+  display: inline-block;
+  background: rgba(255, 43, 58, 0.1);
+  border: 1px solid var(--red);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-family: var(--m);
+  font-size: 13px;
+  text-decoration: none;
+  word-break: break-all;
+  margin-bottom: 24px;
+  transition: background 0.2s;
+}
+.madara-popup-link:hover {
+  background: rgba(255, 43, 58, 0.25);
+}
+.madara-popup-btn {
+  background: var(--red);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 43, 58, 0.5);
+  transition: transform 0.2s;
+}
+.madara-popup-btn:hover {
+  transform: scale(1.05);
+}
+@keyframes fadeInPopup {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 /* Tablet / Medium Laptop Breakpoint */
 @media(max-width:1080px){
   .grid-4{grid-template-columns:repeat(2,1fr)}
@@ -1124,6 +1208,27 @@ footer{text-align:center;color:var(--mute);padding:30px 20px 50px;font-size:14px
     </div>
   </div>
 </div>
+
+<!-- POPUP MESSAGE & SCREENSHOT SCRIPT -->
+<div id="madaraPopupContainer"></div>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const popupHtml = `
+    <div class="madara-popup-overlay" id="madaraPopupOverlay">
+      <div class="madara-popup-box">
+        <h3>Madara MD Notification</h3>
+        <!-- මෙහි image src එකට ඔබේ ස්ක්‍රීන්ෂොට් (SS) එකේ ෆයිල් නේම් එක දෙන්න (උදාහරණයක් ලෙස: screenshot.png) -->
+        <img src="screenshot.png" alt="Madara MD SS" class="madara-popup-img">
+        <p>ඔබගේ මදාර එම්ඩී වෙබ් අඩවියේ නිල ලින්ක් එක:</p>
+        <a href="https://madara-md.ominisave.store/" target="_blank" class="madara-popup-link">https://madara-md.ominisave.store/</a>
+        <br>
+        <button class="madara-popup-btn" onclick="document.getElementById('madaraPopupOverlay').style.display='none'">OK / වසන්න</button>
+      </div>
+    </div>
+  `;
+  document.getElementById('madaraPopupContainer').innerHTML = popupHtml;
+});
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
